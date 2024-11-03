@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "1c394d0f-ad40-4e38-b118-1195392009e2",
+		"name": "Currency_exchange",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2899677"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/api/calculate",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"name\": \"Item 1\",\r\n      \"category\": \"Electronics\",\r\n      \"amount\": 150.0\r\n    }\r\n  ],\r\n  \"totalAmount\": 150.0,\r\n  \"userType\": \"affiliate\",\r\n  \"customerTenure\": 3,\r\n  \"originalCurrency\": \"USD\",\r\n  \"targetCurrency\": \"USD\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"calculate"
+					]
+				},
+				"description": "Currecny Exchange Collection"
+			},
+			"response": []
+		}
+	]
+}
