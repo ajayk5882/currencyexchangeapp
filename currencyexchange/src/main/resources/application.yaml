@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+exchange-api:
+  api-url: https://v6.exchangerate-api.com/v6/
+  api-key: 2d19e9db49176771111cc418
+  api-call-limit: 60
+  cache-name: exchanges
+  cache-ttl: 10000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    metrics:
+      enabled: true
+
+
+
